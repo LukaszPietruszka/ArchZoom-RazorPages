@@ -1,0 +1,58 @@
+﻿/* card-box - obrazki */
+.BoxCard {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.card-box {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 2px solid #333;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 1em;
+    width: 280px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1em;
+}
+
+    .card-body h2 {
+        margin-bottom: 1em;
+        color: #c5b358;
+    }
+
+    .card-body p {
+        margin-bottom: 1em;
+    }
+
+    .card-body .read-more {
+        margin-top: auto;
+        color: rgb(189, 189, 189);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+.card img {
+    width: 100%;
+    max-height: 300px;
+}
+
+.read-more img {
+    width: 30px;
+}
+

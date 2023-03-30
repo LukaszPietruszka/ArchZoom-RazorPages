@@ -1,0 +1,89 @@
+﻿@page
+@model WebApp.Pages.Forms.ViewPlaceModel
+@{
+    ViewData["Title"] = "View Page";
+}
+
+@*<table class="table-responsive mytable">
+    <tr>
+        <td width="50%">
+            <table>
+                <tr>
+                    <td>
+                        <h2>@Html.DisplayFor(model => Model.ShowPlace.Name)</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>@Html.DisplayFor(model => Model.ShowPlace.Country)</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>@Html.DisplayFor(model => Model.ShowPlace.City)</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            @Html.DisplayFor(model => Model.ShowPlace.Description)
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td  class="float-right">
+            <img src="/PngDB/@Html.DisplayFor(model => Model.ShowPlace.Photo)"
+                 alt="Architekture" class="img-fluid rounded">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p></p>
+        </td>
+    </tr>
+    <tr>
+        <td width="50%">
+        </td>
+        <td>
+            <a asp-page="/Index" class="button button-gold float-right">Wróć</a>
+        </td>
+    </tr>
+</table>*@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="panel panel-default">
+                <!-- TYTUŁ -->
+                <div class="panel-heading">
+                    <h3 class="panel-title pt-3" style="color: #c5b358">
+                        @Html.DisplayFor(model => Model.ShowPlace.Name)
+                    </h3>
+                    <h4 class="panel-title">
+                        @Html.DisplayFor(model => Model.ShowPlace.Country)
+                    </h4>
+                    <h5 class="panel-title">
+                        @Html.DisplayFor(model => Model.ShowPlace.City)
+                    </h5>
+                </div>
+
+                <!-- TREŚĆ -->
+                <div class="panel-body" style="word-wrap: break-word;">
+                    @Html.DisplayFor(model => Model.ShowPlace.Description)
+                </div>
+            </div>
+        </div>
+            <div class="col-lg-8">
+                <!-- Zdjęcie -->
+                <div class="text-center my-3">
+                    <img src="/PngDB/@Html.DisplayFor(model => Model.ShowPlace.Photo)" class="img-fluid rounded-lg w-75 shadow-lg" alt="Responsive image">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- PRZYCISKI --> 
+            <a asp-page="/Index" class="button button-gold float-right">Wróć</a>
+        </div>
+    </div>

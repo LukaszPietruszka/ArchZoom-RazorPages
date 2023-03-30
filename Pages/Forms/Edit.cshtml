@@ -1,0 +1,34 @@
+﻿@page
+@model WebApp.Pages.Forms.EditModel
+@{
+    ViewData["Title"] = "Edit Page";
+}
+
+<div class="bodyplusedit">
+    <div class="form">
+        <form method="post" enctype="multipart/form-data" class="fplus">
+            <h2>Edytuj kartę</h2>
+
+            <label for="Name">Nazwa:</label>
+            <input type="text" asp-for="EditPlace.Name" required>
+
+            <label for="Country">Kraj:</label>
+            <input type="text" asp-for="EditPlace.Country" required>
+
+            <label for="City">Miasto:</label>
+            <input type="text" asp-for="EditPlace.City" required>
+
+            <label for="City">Opis:</label>
+            <textarea rows="3" asp-for="EditPlace.Description"></textarea>
+
+            <label for="imglink">Wczytaj zdjęcie:</label>
+            <input type="hidden" asp-for="EditPlace.Photo">
+            <input type="file" asp-for="FileUpload.PhotoFile" />
+
+            <input type="hidden" asp-for="EditPlace.Id">
+
+            <input type="submit" name="submit" value="Zapisz" id="send">
+
+        </form>
+    </div>
+</div>

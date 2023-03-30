@@ -1,0 +1,79 @@
+﻿.bodyplus {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-image: url(/PNG/2560x1600_airplane-building-facade-bw-bottom-view-hong-kong.jpg);
+    background-position: center;
+    margin-top: 4%;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height: 650px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.fplus {
+    width: 400px;
+    border: 2px solid #ccc;
+    padding: 20px;
+}
+
+.fplus label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #555555;
+}
+
+.fplus input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fplus textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.fplus input[type=submmit] {
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+#send {
+    background-color: #c5b358;
+}
+
+#send:hover {
+    opacity: 0.8;
+}
+
+h2 {
+    margin-bottom: 1em;
+    color: #c5b358;
+}
+
+/*For EditPage*/
+
+.bodyplusedit {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-image: url(/PNG/1600x1200_building-facade-windows-architecture-minimalism.jpg);
+    background-position: center;
+    margin-top: 4%;
+}

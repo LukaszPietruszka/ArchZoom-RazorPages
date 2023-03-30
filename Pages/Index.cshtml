@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">ArchZoom</h1>
+
+
+    @if (Model.Place.Count() == 0)
+    {
+        <p class="text-center"> Brak danych do wyświetlenia </p>
+    }
+
+    <div class="card-columns" style="margin-top:2em; padding: 0 2em 0 2em ">
+        @foreach (var item in Model.Place)
+        {
+            <div class="card">
+                <img src="/PngDB/@Html.DisplayFor(modelItem => item.Photo)" class="card-img-top" alt="Losowy obrazek">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #c5b358">@Html.DisplayFor(modelItem => item.Name)</h5>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Country)</p>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.City)</p>
+                    <table width="80%" align="center" class="read-more">
+                        <tr>
+                            <td width="33%">
+                                <a asp-page="/Forms/Edit" asp-route-id="@item.Id" class="button button-green">Edytuj</a>
+                            </td>
+                            <td>
+                                <a asp-page="/Forms/Delete" asp-route-id="@item.Id" class="button button-red" onclick="return confirm('Czy napewno chcesz usunąć tą kartę?')">Usuń</a>
+                            </td>
+                            <td>
+                                <a asp-page="/Forms/ViewPlace" asp-route-id="@item.Id"class="button button-gold">Więcej</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+         }
+    </div>
+</div>
+
+
+

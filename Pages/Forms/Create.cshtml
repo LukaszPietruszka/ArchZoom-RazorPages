@@ -1,0 +1,33 @@
+﻿@page
+@model WebApp.Pages.Forms.CreateModel
+@{
+    ViewData["Title"] = "Create Page";
+}
+
+<div class="bodyplus">
+    <div class="form">
+        <form method="post" enctype="multipart/form-data" class="fplus">
+            <h2>Dodaj nową kartę</h2>
+
+            <label>Nazwa:</label>
+            <input type="text" asp-for="Place.Name" required>
+
+            <label>Kraj:</label>
+            <input type="text" asp-for="Place.Country" required>
+
+            <label>Miasto:</label>
+            <input type="text" asp-for="Place.City" required>
+
+            <label>Opis:</label>
+            <textarea rows="3" asp-for="Place.Description"></textarea>
+
+            <label for="imglink">Wczytaj zdjęcie:</label>
+            <input type="file" asp-for="FileUpload.PhotoFile" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0]);
+    document.getElementById('file_name').innerHTML = $(this).val().split('/').pop().split('\\').pop()" lang="pl" 
+            required/>
+
+            <input type="submit" name="submit" value="Zapisz" id="send">
+
+        </form>
+    </div>
+</div>
